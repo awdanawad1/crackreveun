@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>lovely-time the best</title>
+  <link rel="icon" href="icon.png" type="image/png">
+  <video autoplay muted loop id="myVideo">
+    <source src="3.mp4" type="video/mp4">
+  </video>
+  <link href="https://fonts.googleapis.com/css?family=Fira+Sans:300" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    /* إضافة تنسيق CSS داخلي إذا لزم الأمر */
+    .d2 {
+      display: none; /* إخفاء العنصر d2 افتراضيًا */
+    }
+    .d1 {
+      display: block; /* التأكد من أن العنصر d1 مرئي افتراضيًا */
+    }
+  </style>
+</head>
+<body>
+  <!-- partial:index.partial.html -->
+   <div class="d1">
+    <div class="buttons">
+      <h1>Are you of <code>the right age </code>to enter the site?</h1>
+      <button class="up" type="button">Yes</button>
+      <button class="offset" type="button">No</button>
+    </div>
+  </div>
+  <div class="d2">
+    <div class="buttons">
+      <h1> You can choose  <code>the category you are most attracted </code></h1>
+      <button class="fill" >Anal</button>
+      <button class="pulse">Ass</button>
+      <button class="close" >Tits</button>
+      <button class="raise" >Penis</button>
+      <button class="up">Milf</button>
+      <button class="slide" >Latina</button>
+      <button class="offset" >White</button>
+    </div>
+  </div>
+  <div class="d3">
+    <div class="buttons">
+      <h1>What <code>video quality</code> do you prefer when watching content</h1>
+      <button class="fill">HD (High Definition)</button>
+      <button class="pulse" >Full HD (Higher than HD)</button>
+      <button class="slide" >4K (Higher than Full HD)</button>
+      <button class="offset" >SD (Low Quality)</button>
+      
+    </div>
+  </div>
+  <div class="d4">
+    <div class="buttons">
+      <h1> Would you prefer to receive <b></b>
+         personalized content that matches your <code>Sexual Orientation </code></h1>
+    
+    
+      <button class="up"type="button">Yes</button>
+      <button class="offset"type="button">No</button>
+    </div>
+  </div>
+  <div class="d5">
+    <div class="buttons">
+      <h1> What is your <code>Gender </code></h1>
+    
+      <button class="pulse"type="button">Male</button>
+    
+      <button class="up"type="button" >Female</button>
+      <button class="offset"type="button" >Trans</button>
+    </div>
+  </div>
+  <div class="d6">
+    <div class="buttons">
+      <h1>Do you want <code>Webcam Content </code></h1>
+      <button class="up" type="button">Yes</button>
+      <button class="offset" type="button">No</button>
+    </div>
+  </div>
+
+
+  <script>
+    // تحديد جميع العناصر التي تحتوي على الأزرار
+    const dElements = ['.d1', '.d2', '.d3', '.d4', '.d5', '.d6'];
+    
+    // تابع لتبديل العرض بين العناصر أو الانتقال إلى جوجل
+    function switchDisplay(currentIndex) {
+      const currentElement = document.querySelector(dElements[currentIndex]);
+      const nextElement = document.querySelector(dElements[currentIndex + 1]);
+  
+      if (currentElement) {
+        if (currentIndex === dElements.length - 1) {
+          // إذا كان العنصر هو d6، يتم الانتقال إلى جوجل
+          window.location.href = 'https://www.crkshld.com/?offer_id=8602/0&affiliate_id=124729&aff_sub=&sub_id_2=&sub_id_3=&sub_id_4=&sub_id_5=SF_006OG000004lmDN&source=';
+        } else if (nextElement) {
+          // إخفاء العنصر الحالي وعرض العنصر التالي
+          currentElement.style.display = 'none';
+          nextElement.style.display = 'block';
+        }
+      }
+    }
+  
+    // إضافة حدث النقر لكل زر في كل عنصر من العناصر
+    dElements.forEach((selector, index) => {
+      const buttons = document.querySelectorAll(`${selector} .buttons button`);
+      buttons.forEach(button => {
+        button.addEventListener('click', () => {
+          switchDisplay(index);
+        });
+      });
+    });
+  
+    // إخفاء جميع العناصر باستثناء العنصر الأول عند تحميل الصفحة
+    document.addEventListener('DOMContentLoaded', () => {
+      dElements.forEach((selector, index) => {
+        const element = document.querySelector(selector);
+        if (element) {
+          element.style.display = index === 0 ? 'block' : 'none'; // عرض العنصر الأول فقط
+        }
+      });
+    });
+  </script>
+  
+  
+</body>
+</html>
